@@ -12,6 +12,7 @@
         table{
             width: 500px;
             border-collapse:collapse ;
+            position: relative;
         }
 
         td, th{
@@ -19,9 +20,31 @@
             padding: 10px;
         }
 
+            caption{
+                font: size 1.5em;
+                font-weight: bold;
+                padding: 10px;
+                background-color: lightgray;
+            }
+
         thead, tfoot{
-            background-color: gray;
+            background-color: lightgray;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: lightgray;
+        }
+
+        tbody > tr:nth-child(odd){ /* 2n-1*/
+            background-color:white;
+        }
+
+        
+        tbody > tr:nth-child(even){ /*2n*/
+            background-color:lightgray;
         }
 
         td.num{
@@ -33,6 +56,7 @@
     <h1>Uso de tabelas grandes</h1>
     <!--ANATOMIA PARA TABELAS GRANDES
      TABLE
+     CAPTION = LEGENDA
         THEAD
             TR, TD, TH
             TBODY
@@ -41,10 +65,11 @@
                      TR, TD, TH 
             -->
    <table>
+        <caption>População das unidades federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width:50px ;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -155,10 +180,16 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes</th>
                 <td class="num"><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
    </table>
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum vitae, omnis nemo accusantium exercitationem velit accusamus, commodi ex explicabo sapiente saepe dolorem mollitia minus consequuntur ab rem sit dolorum nihil. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas nemo qui rem, dolores corrupti minus commodi iste animi sequi repudiandae, eaque accusantium magnam iure consectetur, nam eos mollitia itaque fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae qui non debitis hic explicabo expedita nulla illum iure omnis praesentium eos officia, totam voluptates, beatae ab illo numquam laudantium? Ab. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente in totam reiciendis labore? Delectus, doloremque minima, aliquam perspiciatis a iure praesentium illum odit, quaerat magnam distinctio expedita! Impedit, voluptas. Minima?</p>
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum vitae, omnis nemo accusantium exercitationem velit accusamus, commodi ex explicabo sapiente saepe dolorem mollitia minus consequuntur ab rem sit dolorum nihil. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas nemo qui rem, dolores corrupti minus commodi iste animi sequi repudiandae, eaque accusantium magnam iure consectetur, nam eos mollitia itaque fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae qui non debitis hic explicabo expedita nulla illum iure omnis praesentium eos officia, totam voluptates, beatae ab illo numquam laudantium? Ab. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente in totam reiciendis labore? Delectus, doloremque minima, aliquam perspiciatis a iure praesentium illum odit, quaerat magnam distinctio expedita! Impedit, voluptas. Minima?</p>
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum vitae, omnis nemo accusantium exercitationem velit accusamus, commodi ex explicabo sapiente saepe dolorem mollitia minus consequuntur ab rem sit dolorum nihil. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas nemo qui rem, dolores corrupti minus commodi iste animi sequi repudiandae, eaque accusantium magnam iure consectetur, nam eos mollitia itaque fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae qui non debitis hic explicabo expedita nulla illum iure omnis praesentium eos officia, totam voluptates, beatae ab illo numquam laudantium? Ab. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente in totam reiciendis labore? Delectus, doloremque minima, aliquam perspiciatis a iure praesentium illum odit, quaerat magnam distinctio expedita! Impedit, voluptas. Minima?</p>
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum vitae, omnis nemo accusantium exercitationem velit accusamus, commodi ex explicabo sapiente saepe dolorem mollitia minus consequuntur ab rem sit dolorum nihil. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas nemo qui rem, dolores corrupti minus commodi iste animi sequi repudiandae, eaque accusantium magnam iure consectetur, nam eos mollitia itaque fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae qui non debitis hic explicabo expedita nulla illum iure omnis praesentium eos officia, totam voluptates, beatae ab illo numquam laudantium? Ab. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente in totam reiciendis labore? Delectus, doloremque minima, aliquam perspiciatis a iure praesentium illum odit, quaerat magnam distinctio expedita! Impedit, voluptas. Minima?</p>
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum vitae, omnis nemo accusantium exercitationem velit accusamus, commodi ex explicabo sapiente saepe dolorem mollitia minus consequuntur ab rem sit dolorum nihil. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas nemo qui rem, dolores corrupti minus commodi iste animi sequi repudiandae, eaque accusantium magnam iure consectetur, nam eos mollitia itaque fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae qui non debitis hic explicabo expedita nulla illum iure omnis praesentium eos officia, totam voluptates, beatae ab illo numquam laudantium? Ab. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente in totam reiciendis labore? Delectus, doloremque minima, aliquam perspiciatis a iure praesentium illum odit, quaerat magnam distinctio expedita! Impedit, voluptas. Minima?</p>
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum vitae, omnis nemo accusantium exercitationem velit accusamus, commodi ex explicabo sapiente saepe dolorem mollitia minus consequuntur ab rem sit dolorum nihil. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas nemo qui rem, dolores corrupti minus commodi iste animi sequi repudiandae, eaque accusantium magnam iure consectetur, nam eos mollitia itaque fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae qui non debitis hic explicabo expedita nulla illum iure omnis praesentium eos officia, totam voluptates, beatae ab illo numquam laudantium? Ab. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente in totam reiciendis labore? Delectus, doloremque minima, aliquam perspiciatis a iure praesentium illum odit, quaerat magnam distinctio expedita! Impedit, voluptas. Minima?</p>
 </body>
 </html>
